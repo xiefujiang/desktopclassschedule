@@ -5,6 +5,7 @@
 #include <QSystemTrayIcon>
 #include <QSettings>
 #include <QResource>
+#include <QImage>
 
 int main(int argc, char *argv[])
 {
@@ -17,7 +18,8 @@ int main(int argc, char *argv[])
     //创建系统托盘
     static bool isshowed = true;
     QSystemTrayIcon tray = new QSystemTrayIcon();
-    QIcon icon = QIcon("C:/111/res/icon.jpg");
+
+    QIcon icon = QIcon(":/icon/res/icon.jpg");
     tray.setIcon(icon);
     tray.setToolTip(QString::fromLocal8Bit("课程表"));
     QMenu *menu = new QMenu();

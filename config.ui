@@ -110,11 +110,14 @@ background-color: rgb(255, 255, 127);</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>60</x>
       <y>480</y>
-      <width>271</width>
+      <width>101</width>
       <height>16</height>
      </rect>
     </property>
@@ -145,6 +148,25 @@ background-color: rgb(255, 255, 127);</string>
     </property>
     <property name="text">
      <string>CopyRight (C) 2023 1094474436@qq.com All Rights Reserved.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>480</y>
+      <width>491</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MaoKenTangYuan (beta)</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>GitHub https://github.com/xiefujiang/desktopclassschedule</string>
     </property>
    </widget>
   </widget>

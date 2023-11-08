@@ -12,6 +12,7 @@
 #include <QSettings>
 #include <QStandardItemModel>
 #include <QDebug>
+#include<QScreen>
 
 layer_class::layer_class(QWidget *parent)
     : QWidget(parent)
@@ -22,8 +23,12 @@ layer_class::layer_class(QWidget *parent)
     this->setWindowFlag(Qt::FramelessWindowHint);
     this->setFixedSize(115,630);
     this->setAttribute(Qt::WA_TranslucentBackground,true);
-    move(1810,200);
-
+    QScreen *screen=QGuiApplication::primaryScreen ();
+    QRect mm=screen->availableGeometry() ;
+    int screen_width = mm.width();
+    int screen_height = mm.height();
+    //move(1810,200);1920,1080
+    move(screen_width-110,(int)(screen_height/2)-315);
     //保持窗口总在最前
     this->setWindowFlags(this->windowFlags() | Qt::WindowStaysOnTopHint);
     this->setWindowFlags(this->windowFlags() | Qt::WindowTransparentForInput | Qt::ToolTip);
